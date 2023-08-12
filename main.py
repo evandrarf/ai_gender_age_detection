@@ -44,6 +44,8 @@ padding = 20
 while True:
     hasFrame, vidFrame = video.read()
 
+    vidFrame = cv2.flip(vidFrame, 1)
+
     if not hasFrame:
         cv2.waitKey()
         break
